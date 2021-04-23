@@ -15,10 +15,14 @@ public class HelloWorld {
         //because we told it to be a string, we can only assign a string to it
         System.out.println(myString);
 
-        float myNumber = 3;
-        System.out.println(myNumber);
+        float myNumber;
+//        myNumber = (float)3.14;
         //can't log an unassigned variable
         //depending on the data type, you can only assign an INTEGER within its specific range
+        //though, by casting it EXPLICITLY we can use non integers such as pi
+        myNumber = 3.14F;
+        //^does the same
+        System.out.println(myNumber);
 
 //        int x = 5;
 //        System.out.println(x++);
@@ -30,6 +34,7 @@ public class HelloWorld {
 //        System.out.println(x);
 
         //can't make a variable named class cuz we're in one lol
+        //class is a reserved keyword
 
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
@@ -59,7 +64,6 @@ public class HelloWorld {
 //        y -= x; // 2 - 5 = -3
 //        System.out.println(x);
 //        System.out.println(y);
-
     }
 }
 
