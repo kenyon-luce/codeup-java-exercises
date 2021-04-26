@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args){
-//        ****************EXERCISE*****************
+//        ****************EXERCISE 4*****************
         Scanner sc = new Scanner(System.in);
         System.out.println("Please input your grade");
         int grade = sc.nextInt();
