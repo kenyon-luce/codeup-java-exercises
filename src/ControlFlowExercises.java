@@ -1,19 +1,32 @@
 import java.util.Scanner;
 
 public class ControlFlowExercises {
-    public static void main(String[] args){
-//        ****************EXERCISE 3: Table of Powers*****************
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Hi! I'm a loop, how many numbers should I loop?");
-            int input = sc.nextInt();
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            for(int i = 1; i <= input; i++){
-                int number = i;
-                int squared = i * i;
-                int cubed = i * i * i;
-                System.out.printf("%-7d| %-8d| %d\n", number, squared, cubed);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        boolean confirm;
+        do {
+            System.out.println("What number would you like to go up? ");
+            int upToUserInput = sc.nextInt();
+
+            System.out.println("Here is your table!");
+            System.out.println("____________________________");
+            System.out.println("| number | squared | cubed |");
+            System.out.println("| ------ | ------- | ----- |");
+
+            for (int i = 1; i <= upToUserInput; i++) {
+                double squared = Math.pow(i, 2);
+                double cubed = Math.pow(i, 3);
+                int sq = (int) squared;
+                int cu = (int) cubed;
+                System.out.printf("| %-7d| %-8d| %-5d |\n", i, sq, cu);
             }
-            System.out.print("Here you go!");
-        }
+            System.out.println("----------------------------");
+
+            System.out.print("Continue? [y/N]\n");
+            String userInput = sc.next();
+            confirm = userInput.equalsIgnoreCase("y");
+
+        } while (confirm);
     }
+}
