@@ -20,5 +20,6 @@ public class ConsoleExercises {
         System.out.println(second);
         System.out.println(third);
         //nextLine()
+
     }
 }
