@@ -6,10 +6,9 @@ public class ControlFlowExercises {
 
         boolean confirm;
         do {
-            System.out.println("What number would you like to go up? ");
+            System.out.println("Hi! I'm a loop, how many numbers should I loop? ");
             int upToUserInput = sc.nextInt();
 
-            System.out.println("Here is your table!");
             System.out.println("____________________________");
             System.out.println("| number | squared | cubed |");
             System.out.println("| ------ | ------- | ----- |");
@@ -22,10 +21,11 @@ public class ControlFlowExercises {
                 System.out.printf("| %-7d| %-8d| %-5d |\n", i, sq, cu);
             }
             System.out.println("----------------------------");
+            System.out.println("Here you go!");
 
-            System.out.print("Continue? [y/N]\n");
+            System.out.print("Loop again? [Y/N]\n");
             String userInput = sc.next();
-            confirm = userInput.equalsIgnoreCase("y");
+            confirm = userInput.equalsIgnoreCase("Y");
 
         } while (confirm);
     }
