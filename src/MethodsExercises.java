@@ -7,7 +7,7 @@ public class MethodsExercises {
 //        System.out.println(Multiplication(1,2));
 //        System.out.println(Division(1,2));
 //        System.out.println(Modulus(1,2));
-        getInteger(1, 10);
+        int userInput = getInteger(1, 10);
     }
 
     //EXERCISE 1
@@ -32,14 +32,17 @@ public class MethodsExercises {
     }
 
     //EXERCISE 2
-    public static void getInteger(int min, int max){
+    public static int getInteger(int min, int max){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 10: ");
-        int input = sc.nextInt();
-        if(input > min && input < max){
-            System.out.print("Correct");
+        int userInput = sc.nextInt();
+
+        if(userInput >= min & userInput <= max){
+            System.out.println("Thanks!");
+            return userInput;
         } else {
-            System.out.print("Give me a number between 1 and 10: ");
+            return getInteger(max, min);
+            //^repeats the method if false
         }
     }
 
