@@ -44,6 +44,7 @@ public class MethodsExercises {
             return getInteger(max, min);
             //^repeats the method if false
         }
+
     }
 
 }
