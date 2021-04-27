@@ -2,20 +2,18 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args){
-//        ****************EXERCISE 4*****************
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please input your grade");
-        int grade = sc.nextInt();
-        if(grade >= 88){
-            System.out.println("A");
-        } else if(grade >= 80){
-            System.out.println("B");
-        } else if(grade >= 67){
-            System.out.println("C");
-        }else if(grade >= 60){
-            System.out.println("D");
-        }else{
-            System.out.println("F");
+//        ****************EXERCISE 3: Table of Powers*****************
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Hi! I'm a loop, how many numbers should I loop?");
+            int input = sc.nextInt();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for(int i = 1; i <= input; i++){
+                int number = i;
+                int squared = i * i;
+                int cubed = i * i * i;
+                System.out.printf("%-7d| %-8d| %d\n", number, squared, cubed);
+            }
+            System.out.print("Here you go!");
         }
     }
-}
