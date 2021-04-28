@@ -95,18 +95,18 @@ public class MethodsExercises {
         int guessLimit = 5;
         int guesses = 0;
         int guess; //the variable name is outside so we can call on it later
-            do {
-                guess = sc.nextInt(); ///giving it a value here lets you update to a new guess since it loops
-                if (guess > randomNum) {
-                    System.out.println("HIGH");
-                } else if (guess < randomNum) {
-                    System.out.println("LOW");
-                }
-                guesses++;
-                System.out.println("Guesses left: " + (guessLimit - guesses));
-            } while (guess != randomNum);
-            //^as you guess wrong, it will return the relevant response and will loop again. When you guess the correct number, you will exit the loop and get the following response
-            System.out.println("GOOD GUESS!");
+        do {
+            guess = sc.nextInt(); ///giving it a value here lets you update to a new guess since it loops
+            if (guess > randomNum) {
+                System.out.println("HIGH");
+            } else if (guess < randomNum) {
+                System.out.println("LOW");
+            }
+            guesses++;
+            System.out.println("Guesses left: " + (guessLimit - guesses));
+        } while (guess != randomNum);
+        //^as you guess wrong, it will return the relevant response and will loop again. When you guess the correct number, you will exit the loop and get the following response
+        System.out.println("GOOD GUESS!");
 
 //        int guessesLeft;
 //        if (guessesLeft == 0){
