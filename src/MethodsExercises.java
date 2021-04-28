@@ -7,15 +7,21 @@ public class MethodsExercises {
 //        System.out.println(Multiplication(1,2));
 //        System.out.println(Division(1,2));
 //        System.out.println(Modulus(1,2));
+
         //EXERCISE 3
-        String response;
+//        String response;
 //        do {
 //            Scanner sc = new Scanner(System.in);
 //            int userInput = getInteger(1, 10);
 //            System.out.print("Continue? [Y/N] ");
 //            response = sc.next();
 //        } while (response.equalsIgnoreCase("Y"));
-        rollDice();
+
+        //EXERCISE 4
+//        rollDice();
+
+        //EXERCISE 5
+        HighLow();
     }
 
     //EXERCISE 1
@@ -59,6 +65,7 @@ public class MethodsExercises {
         }
     }
 
+    //EXERCISE 4
     public static void rollDice(){
         String response;
         do{
@@ -75,5 +82,27 @@ public class MethodsExercises {
             System.out.println("Re-roll?  [Y/N]");
             response = sc.next();
         } while(response.equalsIgnoreCase("Y"));
+        }
+    //EXERCISE 5
+    public static void HighLow(){
+        Scanner sc = new Scanner(System.in);
+        int randomNum = (int)(Math.random() * (100 - 1) + 1);
+        System.out.println("Guess the number!");
+//        System.out.println("(" + randomNum + ")");
+        //^this was just to test the game
+
+        int guess;
+        //^the variable name is outside so we can call on it later
+        do{
+            guess = sc.nextInt();
+            //^giving it a value here lets you update to a new guess since it loops
+            if(guess > randomNum){
+                System.out.println("HIGH");
+            } else if(guess < randomNum) {
+                System.out.println("LOW");
+            }
+        } while(guess != randomNum);
+        //^as you guess wrong, it will return the relevant response and will loop again. When you guess the correct number, you will exit the loop and get the following response
+            System.out.println("GOOD GUESS!");
     }
 }
