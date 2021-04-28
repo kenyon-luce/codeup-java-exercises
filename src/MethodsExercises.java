@@ -7,13 +7,15 @@ public class MethodsExercises {
 //        System.out.println(Multiplication(1,2));
 //        System.out.println(Division(1,2));
 //        System.out.println(Modulus(1,2));
+        //EXERCISE 3
         String response;
-        do {
-            Scanner sc = new Scanner(System.in);
-            int userInput = getInteger(1, 10);
-            System.out.print("Continue? [Y/N] ");
-            response = sc.next();
-        } while (response.equalsIgnoreCase("Y"));
+//        do {
+//            Scanner sc = new Scanner(System.in);
+//            int userInput = getInteger(1, 10);
+//            System.out.print("Continue? [Y/N] ");
+//            response = sc.next();
+//        } while (response.equalsIgnoreCase("Y"));
+        rollDice();
     }
 
     //EXERCISE 1
@@ -55,7 +57,23 @@ public class MethodsExercises {
             return getInteger(max, min);
             //^repeats the method if false
         }
-//
     }
 
+    public static void rollDice(){
+        String response;
+        do{
+            Scanner sc = new Scanner(System.in);
+            System.out.println("You are rolling a pair of dice, how many sides do both dies have?");
+            int sides = sc.nextInt();
+            int die1 = (int)(Math.random() * (sides - 1) + 1);
+            //because we are getting a number, we need to make sure it reads as an integer by adding (int) before the actual variable value
+            int die2 = (int)(Math.random() * (sides - 1) + 1);
+            System.out.println(die1 + "  " + die2);
+            int result = die1 + die2;
+            System.out.println("You rolled a " + result + "!");
+
+            System.out.println("Re-roll?  [Y/N]");
+            response = sc.next();
+        } while(response.equalsIgnoreCase("Y"));
+    }
 }
