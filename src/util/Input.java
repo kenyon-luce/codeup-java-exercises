@@ -5,24 +5,29 @@ import java.util.Scanner;
 //class
 public class Input {
     //instance variable
-    private Scanner sc;
+    Scanner sc = new Scanner(System.in);
 
     //instance methods
-//    public static String getString(){
-//        return sc.nextLine();
-//    };
+    public String getString(){
+        //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
+        return sc.nextLine();
+    }
 
     //TODO: The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
-//    public static boolean yesNo(){
-//        if(sc.next().startsWith("y")){
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    };
+    public boolean yesNo(){
+        //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
+        String input = sc.next();
+        if(input.startsWith("y")){
+            System.out.println("true");
+            return true;
+        } else {
+            System.out.println("false");
+            return false;
+        }
+    }
 
     //TODO: The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max.
-//    public static int getInt(int min, int max){
+//    public int getInt(int min, int max){
 //        min = 1;
 //        max = 10;
 //    };
