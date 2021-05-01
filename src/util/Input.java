@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 //class
 public class Input {
-    //instance variable
-    Scanner sc = new Scanner(System.in);
+    //instance variable (private)
+    private Scanner sc = new Scanner(System.in);
 
     //instance methods
     public String getString(){
@@ -27,24 +27,25 @@ public class Input {
     }
 
     //TODO: The getInt(int min, int max) method should keep prompting the user for input until they give an integer within the min and max.
-//    public int getInt(int min, int max){
-//        min = 1;
-//        max = 10;
-//    };
-//
-//    public static int getInt(){
-//        return;
-//    };
+    public int getInt(int min, int max) {
+        min = 1;
+        max = 10;
+        int guess;
+        do {
+            getInt();
+//            guess = sc.nextInt();
+        } while (getInt() > max | getInt() < min);
+        System.out.println("Thanks!");
+        return 0;
+    }
+
+    public int getInt(){
+        System.out.println("Give me a number between 1 and 10");
+        int guess = sc.nextInt();
+        return guess;
+    }
 
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
-//    public static double getDouble(double min, double max){
-//        min = 3.14;
-//        max = 31.4;
-//    };
-//
-//    public static double getDouble(){
-//        return;
-//    }
 
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
 }
