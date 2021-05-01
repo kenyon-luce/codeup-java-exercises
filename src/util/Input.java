@@ -47,5 +47,23 @@ public class Input {
 
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
 
+    public int getDouble(int min, int max) {
+        min = 1;
+        max = 10;
+        double guess;
+        do {
+            getInt();
+//            guess = sc.nextInt();
+        } while (getInt() > max | getInt() < min);
+        System.out.println("Thanks!");
+        return 0;
+    }
+
+    public double getDouble(){
+        System.out.println("Give me a number between 1 and 10");
+        double guess = sc.nextInt();
+        return guess;
+    }
+
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
 }
