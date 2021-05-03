@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Circle {
     private double radius;
+    //private property
 
     public Circle(double radius){
         this.radius = radius;

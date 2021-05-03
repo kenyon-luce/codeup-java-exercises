@@ -19,13 +19,13 @@ public class Input {
     //TODO: The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
     public static boolean yesNo(){
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
-        System.out.println("Continue?");
+        System.out.println("\nContinue?");
         String input = sc.next();
         if(input.startsWith("y")){
-            System.out.println("true");
+//            System.out.println("true");
             return true;
         } else {
-            System.out.println("false");
+//            System.out.println("false");
             return false;
         }
     }
