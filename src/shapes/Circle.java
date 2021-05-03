@@ -6,8 +6,10 @@ public class Circle {
     private double radius;
 
     public Circle(double radius){
-//        System.out.println("This is a circle with a radius of: " + radius);
         this.radius = radius;
+        //this probably makes the inputted radius private
+        //this allows us to create a circle with the inputted radius by declaring it in a new object
+        //the radius is passed through and caught by the below functions
     }
     public double getArea(){
         double area = Math.pow(radius, 2) * Math.PI;
