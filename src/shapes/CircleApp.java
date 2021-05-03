@@ -7,15 +7,18 @@ import java.util.Scanner;
 public class CircleApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int count = 0;
 
         do {
             System.out.println("What is the radius of your circle?");
-            double inputRadius = sc.nextDouble();
-            System.out.printf("Radius: %.2f\n", inputRadius);
+            double input = Input.getDouble();
+            System.out.printf("Radius: %.2f\n", input);
 
-            Circle newCircle = new Circle(inputRadius);
+            Circle newCircle = new Circle(input);
             newCircle.getArea();
             newCircle.getCircumference();
+            count++;
         } while (Input.yesNo());
+        System.out.println("You finished making " + count + " circles");
     }
 }
