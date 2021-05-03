@@ -49,16 +49,16 @@ public class Input {
 
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
 
-//    public static int getDouble(int min, int max) {
-////        min = 1;
-////        max = 10;
-//        double guessDouble;
-//        do {
-//            guessDouble = getDouble();
-//        } while (guessDouble > max | guessDouble < min);
-//        System.out.println("Thanks!");
-//        return guessDouble;
-//    }
+    public static double getDouble(double min, double max) {
+//        min = 1;
+//        max = 10;
+        double guessDouble;
+        do {
+            guessDouble = getDouble();
+        } while (guessDouble > max | guessDouble < min);
+        System.out.println("Thanks!");
+        return guessDouble;
+    }
 
     public static double getDouble(){
         double inputDouble = sc.nextInt();
