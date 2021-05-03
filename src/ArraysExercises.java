@@ -8,16 +8,13 @@ public class ArraysExercises {
 
         Person[] people = new Person[3]; //(grabbed from Person.class) created new person and gave it a length of 3
 
-//        String addPerson(){
-//          //returns warning
-//        }
+//        Arrays[] container = new Arrays[3];
+//        String[] people = {"person1", "person2", "person3"};
 
         for(Person person : people ){
-
             System.out.println(person);
         }
 
         System.out.print(Arrays.toString(people));
-
     }
 }
