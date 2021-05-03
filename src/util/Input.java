@@ -37,7 +37,7 @@ public class Input {
             System.out.println("Give me a number between " + min + " and " + max);
             guess = getInt();
 //            guess = sc.nextInt();
-        } while (getInt() > max | getInt() < min);
+        } while (guess > max | guess < min);
         System.out.println("Thanks!");
         return guess;
     }
@@ -61,8 +61,8 @@ public class Input {
 //    }
 
     public static double getDouble(){
-        double guessDouble = sc.nextInt();
-        return guessDouble;
+        double inputDouble = sc.nextInt();
+        return inputDouble;
     }
 
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
