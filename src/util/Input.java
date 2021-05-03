@@ -10,6 +10,7 @@ public class Input {
     //instance methods
     public static String getString(){
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
+        System.out.println("Give me a string");
         String string = sc.nextLine();
         System.out.println(string);
         return string;
@@ -18,6 +19,7 @@ public class Input {
     //TODO: The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
     public static boolean yesNo(){
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
+        System.out.println("Continue?");
         String input = sc.next();
         if(input.startsWith("y")){
             System.out.println("true");
@@ -50,8 +52,8 @@ public class Input {
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
 
     public static double getDouble(double min, double max) {
-//        min = 1;
-//        max = 10;
+        //this method breaks if i input a decimal number
+        System.out.println("Give me a decimal number between " + max + " and " + min);
         double guessDouble;
         do {
             guessDouble = getDouble();
