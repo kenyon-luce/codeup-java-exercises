@@ -129,24 +129,25 @@ public class ArraysLec_handout {
         //2d Arrays (commonly referred to as an array matrix) are daunting to encounter for the first time. . but, imagine you are working with a grid/spreadsheet
 
         //TODO Together: Let's utilize the example from the slide to dive into this concept:
+        int[] flatArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-//        int[][] matrix = {
-//                {1, 2, 3}, //row 1
-//                {4, 5, 6}, //row 2
-//                {7, 8, 9}  //row 3
-//        };
-//
-//        for (int[] row : matrix) { //an individual int array from our array of arrays
-//            System.out.println("+---+---+---+");
-//            System.out.print("| ");
-//
-//            for (int number : row) { //an individual number from our int array
-//                System.out.print(number + " | ");
-//            }
-//
-//            System.out.println();
-//        }
-//        System.out.println("+---+---+---+");
+        int[][] matrix = {
+                {1, 2, 3}, //row 1
+                {4, 5, 6}, //row 2
+                {7, 8, 9}  //row 3
+        };
+
+        for (int[] row : matrix) { //an individual int array from our array of arrays
+            System.out.println("+---+---+---+");
+            System.out.print("| ");
+
+            for (int number : row) { //an individual number from our int array
+                System.out.print(number + " | ");
+            }
+
+            System.out.println();
+        }
+        System.out.println("+---+---+---+");
 //
 //        System.out.println("matrix[0][0] = " + matrix[0][0]); //row 1, col 1
 
@@ -154,14 +155,14 @@ public class ArraysLec_handout {
 
         //TODO: Emergency! Emergency! Alien invaders have been detected at int 6, int 7, and int 2 in our grid area! Dispatch our MIB forces to the appropriate parts of the array by finishing my System.outs!
 
-//        System.out.println();
-//        System.out.println("ALERT ** ALERT ** ALERT **");
-//        System.out.println("|| ALIEN ACTIVITY DETECTED IN OUR GRID ||");
-//        System.out.println("** ALERT ** ALERT ** ALERT");
-//        System.out.println("Deploying MIB personnel to counter alien activity!");
-        // System.out.println("MIB Officer Douglas H. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 6!"
-        // System.out.println("MIB Officer Larry C. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 7!"
-        // System.out.println("MIB Officer Kenneth H. headed to grid area " + matrix[?][?] + "!"); //should say "grid area 2!"
+        System.out.println();
+        System.out.println("ALERT ** ALERT ** ALERT **");
+        System.out.println("|| ALIEN ACTIVITY DETECTED IN OUR GRID ||");
+        System.out.println("** ALERT ** ALERT ** ALERT");
+        System.out.println("Deploying MIB personnel to counter alien activity!");
+         System.out.println("MIB Officer Douglas H. headed to grid area " + matrix[1][2] + "!"); //should say "grid area 6!"
+         System.out.println("MIB Officer Larry C. headed to grid area " + matrix[2][0] + "!"); //should say "grid area 7!"
+         System.out.println("MIB Officer Kenneth H. headed to grid area " + matrix[0][1] + "!\n"); //should say "grid area 2!"
 
     }
 }
