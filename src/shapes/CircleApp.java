@@ -13,9 +13,11 @@ public class CircleApp {
             System.out.println("What is the radius of your circle?");
             double input = Input.getDouble();
             System.out.printf("Radius: %.2f\n", input);
+
             Circle newCircle = new Circle(input);
             newCircle.getArea();
             newCircle.getCircumference();
+
             count++;
         } while (Input.yesNo());
 
