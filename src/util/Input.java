@@ -63,7 +63,7 @@ public class Input {
     }
 
     public static double getDouble(){
-        double inputDouble = sc.nextInt();
+        double inputDouble = sc.nextDouble();
         return inputDouble;
     }
 
