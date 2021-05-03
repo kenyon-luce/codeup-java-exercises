@@ -10,7 +10,9 @@ public class Input {
     //instance methods
     public static String getString(){
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
-        return sc.nextLine();
+        String string = sc.nextLine();
+        System.out.println(string);
+        return string;
     }
 
     //TODO: The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
@@ -30,38 +32,37 @@ public class Input {
     public static int getInt(int min, int max) {
 //        min = 1;
 //        max = 10;
-        int guess = getInt();
+        int guess;
         do {
-            getInt();
+            System.out.println("Give me a number between " + min + " and " + max);
+            guess = getInt();
 //            guess = sc.nextInt();
         } while (getInt() > max | getInt() < min);
         System.out.println("Thanks!");
-        return getInt();
+        return guess;
     }
 
     public static int getInt(){
-        System.out.println("Give me a number between 1 and 10");
-        int guess = sc.nextInt();
-        return guess;
+        int input = sc.nextInt();
+        return input;
     }
 
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
 
-    public static int getDouble(int min, int max) {
-        min = 1;
-        max = 10;
-        double guess;
-        do {
-            guess = getDouble();
-        } while (guess > max | guess < min);
-        System.out.println("Thanks!");
-        return 0;
-    }
+//    public static int getDouble(int min, int max) {
+////        min = 1;
+////        max = 10;
+//        double guessDouble;
+//        do {
+//            guessDouble = getDouble();
+//        } while (guessDouble > max | guessDouble < min);
+//        System.out.println("Thanks!");
+//        return guessDouble;
+//    }
 
     public static double getDouble(){
-        System.out.println("Give me a number between 1 and 10");
-        double guess = sc.nextInt();
-        return guess;
+        double guessDouble = sc.nextInt();
+        return guessDouble;
     }
 
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
