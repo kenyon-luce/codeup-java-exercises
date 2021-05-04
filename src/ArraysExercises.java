@@ -14,15 +14,8 @@ public class ArraysExercises {
         people[1] = new Person("person2");
         people[2] = new Person("person3");
 
-//        for(Person name : people ){
-//            System.out.println(name);
-//        }
 
-//        for (int i = 0; i < people.length; i++) {
-//            System.out.println(people[i].getName());
-//        }
         Person kenyon = new Person("Kenyon");
-        addPerson(people, kenyon);
 
         for (int i = 0; i < people.length + 1; i++) {
             System.out.println(addPerson(people, kenyon)[i].getName());
@@ -33,7 +26,8 @@ public class ArraysExercises {
 
     public static Person[] addPerson(Person[] people, Person newPerson) {
         Person[] newPeople = Arrays.copyOf(people, people.length + 1);
-        newPeople[people.length - 1] = newPerson;
+
+        newPeople[newPeople.length - 1] = newPerson;
         return newPeople;
     }
 
