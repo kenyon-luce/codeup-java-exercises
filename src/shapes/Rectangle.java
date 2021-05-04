@@ -16,13 +16,10 @@ public class Rectangle {
         return area;
     }
 
-    public double getParameter(){
-        double parameter = (length * 2) + (width * 2);
-        System.out.println(parameter);
+    public double getPerimeter(){
+        double perimeter = (length * 2) + (width * 2);
+        System.out.println(perimeter);
 
-        return parameter;
-    }
-    public static void main(String[] args){
-        Rectangle test1 = new Rectangle(4,5);
+        return perimeter;
     }
 }
