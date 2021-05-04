@@ -24,4 +24,8 @@ public class Vehicle {
     public void setNumberOfOccupants(int numberOfOccupants) {
         this.numberOfOccupants = numberOfOccupants; //set number
     }
+
+//    public void getMaxSpeed(){
+//        return this.maxSpeed;
+//    }
 }
