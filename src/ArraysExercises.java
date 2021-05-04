@@ -11,10 +11,14 @@ public class ArraysExercises {
 //        Arrays[] container = new Arrays[3];
 //        String[] people = {"person1", "person2", "person3"};
 
-        for(Person person : people ){
-            System.out.println(person);
-        }
+//        for(Person person : people ){
+//            System.out.println(person);
+//        }
 
         System.out.print(Arrays.toString(people));
     }
+//    public Person[] addPerson(){
+//
+//    }
+
 }
