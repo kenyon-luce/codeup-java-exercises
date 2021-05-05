@@ -6,6 +6,8 @@ public class ShapesTest {
         box1.getPerimeter();
         box1.getArea();
 
-        Square box2 = new Square(4,4,4); //????? just want to pass side
+        Rectangle box2 = new Square(5); //just want to pass side, side overwrites Rectangles length and width parameters
+        box2.getPerimeter();
+        box2.getArea();
     }
 }
