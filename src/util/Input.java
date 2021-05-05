@@ -36,7 +36,7 @@ public class Input {
 //        max = 10;
         int guess;
         do {
-            System.out.println("Give me a number between " + min + " and " + max);
+            System.out.println("Please enter a number between " + min + " and " + max);
             guess = getInt();
 //            guess = sc.nextInt();
         } while (guess > max | guess < min);
