@@ -6,16 +6,38 @@ public class Person {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        Person kenyon = new Person("Kenyon Luce");
-//        kenyon.sayHello();
+        Person user = new Person("user");
+        user.sayHello();
 
-        while(true) {
-            System.out.println("What is your name?");
-            String input = sc.next();
-            Person user = new Person(input);
-            user.sayHello();
-            System.out.println();
-        }
+        System.out.println("What is your name?");
+        String input = sc.next();
+//        Person user = new Person(input);
+        user.setName(input);
+        user.sayHello();
+        System.out.println();
+
+
+
+        //**********TESTS**********
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName())); //true
+//        System.out.println(person1 == person2); //false
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2); //true
+
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName()); //John
+//        System.out.println(person2.getName()); //John
+//        person2.setName("Jane");
+//        System.out.println(person1.getName()); //Jane
+//        System.out.println(person2.getName()); //Jane
+        //set name changes the persons name with a new one, since person2 was set equal to person1, when we set the name for person2 to a new name, it updated person1s name too
+
+        //**********END OF TESTS**********
     }
 
     public Person(String name) {
