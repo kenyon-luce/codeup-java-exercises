@@ -19,12 +19,15 @@ public class Square extends Rectangle{ //extends rectangle??
     public double getPerimeter() {
 //        super.getPerimeter();
         double perimeter = side * 4;
-        System.out.println("Perimeter" + perimeter);
+        System.out.println("Perimeter: " + perimeter);
 
         return perimeter;
     }
 
-    public double getSide(){
-        return this.side;
+    public String getMeasurements(){
+        String measurements = "  (length:" + this.side + ", width:" + this.side + ")\n";
+        System.out.print(measurements);
+
+        return measurements;
     }
 }

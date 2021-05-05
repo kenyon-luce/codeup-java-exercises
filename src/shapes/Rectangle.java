@@ -23,15 +23,10 @@ public class Rectangle {
         return perimeter;
     }
 
-    public double getLength(){
-        return this.length;
-    }
-
-    public double getWidth(){
-        return this.width;
-    }
-
     public String getMeasurements(){
-        return "  (length: " + getLength() + ", width: " + getWidth() + ")\n";
+        String measurements = "  (length:" + this.length + ", width:" + this.width + ")\n";
+        System.out.print(measurements);
+
+        return measurements;
     }
 }
