@@ -11,7 +11,7 @@ public class Square extends Rectangle{ //extends rectangle??
     public double getArea() {
 //        super.getArea();
         double area = Math.pow(side, 2);
-        System.out.println(area);
+        System.out.println("Area: " + area);
 
         return area;
     }
@@ -19,8 +19,12 @@ public class Square extends Rectangle{ //extends rectangle??
     public double getPerimeter() {
 //        super.getPerimeter();
         double perimeter = side * 4;
-        System.out.println(perimeter);
+        System.out.println("Perimeter" + perimeter);
 
         return perimeter;
+    }
+
+    public double getSide(){
+        return this.side;
     }
 }

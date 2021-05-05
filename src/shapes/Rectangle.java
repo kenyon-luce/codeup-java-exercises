@@ -11,15 +11,27 @@ public class Rectangle {
 
     public double getArea(){
         double area = length * width;
-        System.out.println(area);
+        System.out.println("Area: " + area);
 
         return area;
     }
 
     public double getPerimeter(){
         double perimeter = (length * 2) + (width * 2);
-        System.out.println(perimeter);
+        System.out.println("Perimeter: " + perimeter);
 
         return perimeter;
+    }
+
+    public double getLength(){
+        return this.length;
+    }
+
+    public double getWidth(){
+        return this.width;
+    }
+
+    public String getMeasurements(){
+        return "  (length: " + getLength() + ", width: " + getWidth() + ")\n";
     }
 }
