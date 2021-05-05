@@ -5,24 +5,18 @@ public class Person {
     private String name;
 
     public static void main(String[] args) {
-        Person kenyon = new Person("Kenyon Luce");
-        //^refers to the below constructor
-        System.out.println(kenyon.getName());
-        //don't need to log the functions since they just update the name
-        kenyon.sayHello();
-        kenyon.setName("not kenyon");
-        kenyon.sayHello();
-        //result will be different since we updated the name
-        //we can do this with more people as well
+        Scanner sc = new Scanner(System.in);
+//        Person kenyon = new Person("Kenyon Luce");
+//        kenyon.sayHello();
+
+        while(true) {
+            System.out.println("What is your name?");
+            String input = sc.next();
+            Person user = new Person(input);
+            user.sayHello();
+            System.out.println();
+        }
     }
-
-
-    //    The class should have a constructor that accepts a `String` value and sets
-//    the person's name to the passed string.
-//
-//    Create a `main` method on the class that creates a new `Person` object and
-//    tests the above methods.
-    //constructor allows us to to create a new person
 
     public Person(String name) {
         this.name = name;
@@ -40,6 +34,6 @@ public class Person {
 
     public void sayHello() {
 //TODO: print a message to the console using the person's name
-        System.out.println("Hello " + getName() + "!");
+        System.out.println("Hello, " + getName() + "!");
     }
 }
