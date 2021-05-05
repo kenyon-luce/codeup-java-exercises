@@ -12,10 +12,6 @@ public class Movie {
         this.category = category;
     }
 
-//    public setMovie(String name, String category){
-//
-//    }
-
     public String setName(String name){
         this.name = name;
         return name;
