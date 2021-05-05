@@ -11,7 +11,7 @@ public class HelloWorld {
         int myFavoriteNumber = 3;
         System.out.println(myFavoriteNumber);
 
-        String myString = "this is my string";
+        String myString = "--> this is my string <--";
         //because we told it to be a string, we can only assign a string to it
         System.out.println(myString);
 
@@ -42,7 +42,7 @@ public class HelloWorld {
         //error: exception in thread
 
 //        int three = (int) "three";
-        //error: string cannot be converted to int
+//        error: string cannot be converted to int
 
 //        int x = 4;
 ////        x = x + 5;
@@ -54,16 +54,16 @@ public class HelloWorld {
 ////        y = y * x;
 //        y *= x; //-694967296
 //        System.out.println(y);
-        //if we increment a numerical variable to a number larger that the int can hold, it will return a strange negative number
+//        if we increment a numerical variable to a number larger that the int can hold, it will return a strange negative number
 
-//        int x = 10;
-//        int y = 2;
-////        x = x / y;
-////        y = y - x;
-//        x /= y; // 10 / 2 = 5
-//        y -= x; // 2 - 5 = -3
-//        System.out.println(x);
-//        System.out.println(y);
+        int x = 10;
+        int y = 2;
+//        x = x / y;
+//        y = y - x;
+        x /= y; // 10 / 2 = 5
+        y -= x; // 2 - 5 = -3
+        System.out.println(x);
+        System.out.println(y);
     }
 }
 
