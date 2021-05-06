@@ -12,14 +12,14 @@ public class Custodian extends Employee{
     }
 
     public String morningMeeting(){
-        return "Accountants have meetings beginning at 8:15AM";
+        return "Custodians have flexible meetings that are determined by the head of the maintenance department";
     }
 
     public String lunchTime(){
-        return "1:00pm";
+        return "12:00pm";
     }
 
     public int dailyPay() {
-        return 500;
+        return 100;
     }
 }
