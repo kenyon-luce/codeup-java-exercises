@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class MoviesApplication {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 //        System.out.println(getMovie());
         System.out.println(
@@ -17,75 +18,79 @@ public class MoviesApplication {
                         "3 - view movies in the drama category\n" +
                         "4 - view movies in the horror category\n" +
                         "5 - view movies in the sci-fi category\n" +
+                        "6 - add a new movie" +
                         "\n" +
                         "Enter your Choice:  "
         );
-        int input = Input.getInt(0, 6);
+        int input;
+        do {
+            input = Input.getInt(0, 6);
+            //return movies based on input
+            Movie[] movies = MoviesArray.findAll();
+            switch (input) {
+                case 0:
+                    System.out.println("See you next time");
+                    break;
 
-        //return movies based on input
-        Movie[] movies = MoviesArray.findAll();
-        switch (input) {
-            case 0:
-                System.out.println("See you next time");
-                break;
-
-            case 1:
-                for (Movie movie : movies) { //iterates through the movies array (line 26)
-                    System.out.println(movie.getName() + " -- " + movie.getCat());
-                }
-                break;
-
-            case 2:
-                for (Movie movie : movies) {
-                    if (movie.getCat().equalsIgnoreCase("animated")) {
+                case 1:
+                    for (Movie movie : movies) { //iterates through the movies array (line 26)
                         System.out.println(movie.getName() + " -- " + movie.getCat());
                     }
-                }
-                break;
+                    break;
 
-            case 3:
-                for (Movie movie : movies) {
-                    if (movie.getCat().equalsIgnoreCase("drama")) {
-                        System.out.println(movie.getName() + " -- " + movie.getCat());
+                case 2:
+                    for (Movie movie : movies) {
+                        if (movie.getCat().equalsIgnoreCase("animated")) {
+                            System.out.println(movie.getName() + " -- " + movie.getCat());
+                        }
                     }
-                }
+                    break;
 
-                break;
-            case 4:
-                for (Movie movie : movies) {
-                    if (movie.getCat().equalsIgnoreCase("horror")) {
-                        System.out.println(movie.getName() + " -- " + movie.getCat());
+                case 3:
+                    for (Movie movie : movies) {
+                        if (movie.getCat().equalsIgnoreCase("drama")) {
+                            System.out.println(movie.getName() + " -- " + movie.getCat());
+                        }
                     }
-                }
-                break;
 
-            case 5:
-                for (Movie movie : movies) {
-                    if (movie.getCat().equalsIgnoreCase("scifi")) {
-                        System.out.println(movie.getName() + " -- " + movie.getCat());
+                    break;
+                case 4:
+                    for (Movie movie : movies) {
+                        if (movie.getCat().equalsIgnoreCase("horror")) {
+                            System.out.println(movie.getName() + " -- " + movie.getCat());
+                        }
                     }
-                }
-                break;
-            case 6:
-                System.out.println(
-                        "Add a movie: \n" +
-                                "What name?"
-                );
-                String newName = sc.nextLine();
+                    break;
 
-                System.out.println(
-                        "What category?"
-                );
-                String newCat = sc.next();
+                case 5:
+                    for (Movie movie : movies) {
+                        if (movie.getCat().equalsIgnoreCase("scifi")) {
+                            System.out.println(movie.getName() + " -- " + movie.getCat());
+                        }
+                    }
+                    break;
+                case 6:
+                    System.out.println(
+                            "Add a movie: \n" +
+                                    "What name?"
+                    );
+                    String newName = sc.nextLine();
+
+                    System.out.println(
+                            "What category?"
+                    );
+                    String newCat = sc.next();
 
 //                Movie newMovie = new Movie(newName, newCat);
 //                System.out.println(newMovie.toString());
-                //cant get it to display it as string, also need it to add to the array
+                    //cant get it to display it as string, also need it to add to the array
 
-                Movie[] newMovies = Movie.addMovie(movies, newName, newCat);
-                for (Movie movie : newMovies) {
-                    System.out.println(movie.getName() + " -- " + movie.getCat());
-                }
-        }
+                    Movie[] addMovie = Movie.addMovie(movies, newName, newCat);
+                    addMovie = movies;
+                    for (Movie movie : movies) {
+                        System.out.println(movie.getName() + " -- " + movie.getCat());
+                    }
+            }
+        } while (input != 0) ;
     }
 }
