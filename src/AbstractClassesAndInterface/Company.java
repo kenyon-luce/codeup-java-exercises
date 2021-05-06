@@ -16,6 +16,6 @@ public class Company {
         System.out.println(joe.work());
 
         //whats the point of using an abstract method/ class?
-        //less code, no need to overwrite, each employee has their own version of work
+        //less code, no need to overwrite, each employee has their own version of work()
     }
 }
