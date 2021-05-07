@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class CollectionsLecture {
 
@@ -59,44 +60,44 @@ public class CollectionsLecture {
 
         // Getting Elements by Index Number
 
-        ArrayList<String> names = new ArrayList<>(Arrays.asList(
-                "Fred",
-                "Sally",
-                "Cindy"
-        ));
-
-        System.out.println(names.get(2));
-//        System.out.println(names.get(5)); // ? returns exception (error) because it doesn't exist in this case
-
-
-        // Adding & Editing Elements
-
-        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
-        numbers.add(20);
-        System.out.println(numbers);
-        numbers.add(0, 21); // expands the array size
-        System.out.println(numbers);
-        numbers.set(0, 7); // edits the value at that index
-        System.out.println(numbers);
-//        numbers.add(10, 22); // ???
-//        System.out.println(numbers);
-//
-//        System.out.println(numbers.size());
-
-
-        // Removing Elements
-
 //        ArrayList<String> names = new ArrayList<>(Arrays.asList(
 //                "Fred",
 //                "Sally",
 //                "Cindy"
 //        ));
-//        System.out.println(names);
-//        names.remove(0);
-//        System.out.println(names);
+//
+//        System.out.println(names.get(2));
+//        System.out.println(names.get(5)); // ? returns exception (error) because it doesn't exist in this case
 
-//        names.remove("Cindy");
-//        System.out.println(names);
+
+        // Adding & Editing Elements
+
+//        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
+//        numbers.add(20);
+//        System.out.println(numbers);
+//        numbers.add(0, 21); // expands the array size, adds 21 to index of 0 and shifting everything else by one index
+//        System.out.println(numbers);
+//        numbers.set(0, 7); // edits the value at that index, changed 21 to 7
+//        System.out.println(numbers);
+////        numbers.add(10, 22); // ??? exception (error) is out of bounds
+//        System.out.println(numbers);
+////
+//        System.out.println(numbers.size()); //returns array.length
+
+
+        // Removing Elements
+
+        ArrayList<String> names = new ArrayList<>(Arrays.asList(
+                "Fred",
+                "Sally",
+                "Cindy"
+        ));
+        System.out.println(names);
+        names.remove(0); //removed "Fred"
+        System.out.println(names);
+
+        names.remove("Cindy"); //does same thing, removes Cindy
+        System.out.println(names);
 
         // Removing Number by Value or Index
 
@@ -106,28 +107,28 @@ public class CollectionsLecture {
 //        System.out.println(numbers);
 
         // reordering list
-
-//        Collections.sort(numbers);
-//        Collections.reverse(numbers);
+//        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(4, 5, 1, 2, 3));
+//        Collections.sort(numbers); //orders numbers from least to greatest
+//        Collections.reverse(numbers); //reverses current order of the list
 //        System.out.println(numbers);
 
         // Additional Methods
 
 //        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
 //        System.out.println(numbers.size());
-//        System.out.println(numbers.indexOf(3));
+//        System.out.println(numbers.indexOf(3)); //
 //        System.out.println(numbers.indexOf(105)); // ???
 //
-//        ArrayList<String> roasts = new ArrayList<>();
-//        roasts.add("medium");
-//        roasts.add("light");
-//        roasts.add("medium");
-//        roasts.add("dark");
-//        System.out.println(roasts);
-//        System.out.println(roasts.contains("dark"));
-//        System.out.println(roasts.contains("espresso"));
-//        System.out.println(roasts.lastIndexOf("medium"));
-//        System.out.println(roasts.isEmpty());
+        ArrayList<String> roasts = new ArrayList<>();
+        roasts.add("medium");
+        roasts.add("light");
+        roasts.add("medium");
+        roasts.add("dark");
+        System.out.println(roasts);
+        System.out.println(roasts.contains("dark")); //returns boolean
+        System.out.println(roasts.contains("espresso")); //returns boolean
+        System.out.println(roasts.lastIndexOf("medium")); //returns the duplicate "medium" index location
+        System.out.println(roasts.isEmpty()); //returns boolean if the array is empty
 
         /*
 
