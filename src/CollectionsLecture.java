@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CollectionsLecture {
 
@@ -14,22 +15,36 @@ public class CollectionsLecture {
 
         // Creating Array Lists and Getting Elements
 
-//        ArrayList<Integer> numbers = new ArrayList<>();
+//        ArrayList<Integer> numbers = new ArrayList<>(); //this list will store Integers, numbers is just the name of the variable
 //        numbers.add(1);
 //        numbers.add(2);
 //        numbers.add(3);
-
+//
+//        System.out.println(numbers);
+//
+//        numbers.add(7); //added the number 7 to the numbers array (sort of like the push() method in Javascript)
 //        System.out.println(numbers); // used to peek into the list
-//        System.out.println(numbers.get(0));
+//        System.out.println(numbers.get(0)); //similar to indexOf
 
 
-//        ArrayList<String> strings = new ArrayList<>();
-//        strings.add("bob");
-//        strings.add("hello");
-//        strings.add("etc");
+        ArrayList<String> strings = new ArrayList<>(); //created empty array and passed in the following 3 strings
+        strings.add("bob");
+        strings.add("hello");
+        strings.add("etc");
 
-//        System.out.println(strings);
-//        System.out.println(strings);
+        String hello = strings.get(1);
+        System.out.println(hello.toUpperCase());
+        System.out.println(strings);
+
+        //TODO: write an array list of 3 people in this cohort and print each person in the list
+        ArrayList<String> cohortMates = new ArrayList<>();
+        cohortMates.add("Jake");
+        cohortMates.add("Shanshan");
+        cohortMates.add("Nic");
+
+        System.out.println(cohortMates.get(0));
+        System.out.println(cohortMates.get(1));
+        System.out.println(cohortMates.get(2));
 
         // Creating ArrayList with Arrays.asList()
 
@@ -38,30 +53,31 @@ public class CollectionsLecture {
 //                "Sally",
 //                "Cindy"
 //        ));
-//
+//        //maybe we can concatenate into this array through this method
+////
 //        System.out.println(names);
 
         // Getting Elements by Index Number
 
-//        ArrayList<String> names = new ArrayList<>(Arrays.asList(
-//                "Fred",
-//                "Sally",
-//                "Cindy"
-//        ));
-//
-//        System.out.println(names.get(2));
-//        System.out.println(names.get(5)); // ?
+        ArrayList<String> names = new ArrayList<>(Arrays.asList(
+                "Fred",
+                "Sally",
+                "Cindy"
+        ));
+
+        System.out.println(names.get(2));
+//        System.out.println(names.get(5)); // ? returns exception (error) because it doesn't exist in this case
 
 
         // Adding & Editing Elements
 
-//        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
-//        numbers.add(20);
-//        System.out.println(numbers);
-//        numbers.add(0, 21); // expands the array size
-//        System.out.println(numbers);
-//        numbers.set(0, 7); // edits the value at that index
-//        System.out.println(numbers);
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
+        numbers.add(20);
+        System.out.println(numbers);
+        numbers.add(0, 21); // expands the array size
+        System.out.println(numbers);
+        numbers.set(0, 7); // edits the value at that index
+        System.out.println(numbers);
 //        numbers.add(10, 22); // ???
 //        System.out.println(numbers);
 //
