@@ -1,10 +1,8 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public class CollectionsLecture {
 
-    public static void printEachElement(ArrayList<String> strings) {
+    public static void printEachElement(List<String> strings) {
         for (String str : strings) {
             System.out.println(str);
         }
@@ -156,22 +154,25 @@ public class CollectionsLecture {
 
         // List vs. ArrayList (Polymorphism)
 
-//        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("bob", "steve", "justin"));
-//        LinkedList<String> linkedList = new LinkedList<>(Arrays.asList("bob", "steve", "justin"));
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("bob", "steve", "justin"));
+        LinkedList<String> linkedList = new LinkedList<>(Arrays.asList("bob", "steve", "justin"));
 //
-//        printEachElement(linkedList);
+        printEachElement(linkedList); //in line 5 we changed ArrayList to List, it is a more generic way of accepting different list types
 
 
         // Java Generics
 
-//        List unsafe = new ArrayList();
-//        unsafe.add(new Object());
-//        unsafe.add(3);
-//        unsafe.add("hello");
-//        unsafe.add(true);
-//
-//        String str1 = (String) unsafe.get(2); // must explicitly cast
+        List unsafe = new ArrayList();
+        unsafe.add(new Object());
+        unsafe.add(3);
+        unsafe.add("hello");
+        unsafe.add(true);
+
+        System.out.println(unsafe); //returns array of different element types
+
+        String str1 = (String) unsafe.get(2); // must explicitly cast (as in whatever you are trying to get you have to specify what type it is)
 //        String str2 = (String) unsafe.get(0); // can lead to runtime exceptions
+        System.out.println(str1);
 
         // ----------------------------- Hash Maps
 
