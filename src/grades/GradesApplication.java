@@ -1,5 +1,6 @@
 package grades;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -57,5 +58,10 @@ public class GradesApplication {
         Scanner sc = new Scanner(System.in);
 
         String input = sc.next();
+        //if the input string equals a key, display the value of that key
+        //might need loop iteration
+        //nvm we don't lol
+        Student output = students.get(input);
+        output.getGradeAverage();
     }
 }
