@@ -20,8 +20,8 @@ public class Input {
     public static boolean yesNo(){
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
         System.out.println("\nContinue?");
-        String input = sc.next();
-        if(input.startsWith("y")){
+        String yesNo = sc.next();
+        if(yesNo.startsWith("y")){
 //            System.out.println("true");
             return true;
         } else {

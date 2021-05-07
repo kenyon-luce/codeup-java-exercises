@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import util.Input;
+
 public class GradesApplication {
     public static void main(String[] args) {
 
@@ -43,25 +45,28 @@ public class GradesApplication {
         students.put("xXshreddermasherXx", raph);
         students.put("cowaMIKEY", mikey);
         students.put("d0nn13.exe", donnie);
+        //            System.out.println(students);
 
-        System.out.println(students);
-        System.out.println();
+        do {
+            System.out.println();
 
-        String[] listOfKeys = students.keySet().toArray(new String[0]); //created a list that will contain all our keys
-        for (String key : listOfKeys) { //iterate through listOfKeys to print keys
-            System.out.println(key);
-        }
-        //seems like the usernames were sorted automatically
+            String[] listOfKeys = students.keySet().toArray(new String[0]); //created a list that will contain all our keys
+            for (String key : listOfKeys) { //iterate through listOfKeys to print keys
+                System.out.println(key);
+            }
+            //seems like the usernames were sorted automatically
 
-        System.out.println();
-        System.out.println("Which student would you like to see more information about?");
-        Scanner sc = new Scanner(System.in);
+            System.out.println();
+            System.out.println("Which student would you like to see more information about?");
+            Scanner sc = new Scanner(System.in);
 
-        String input = sc.next();
-        //if the input string equals a key, display the value of that key
-        //might need loop iteration
-        //nvm we don't lol
-        Student output = students.get(input);
-        output.getGradeAverage();
+            String input = sc.next();
+            //if the input string equals a key, display the value of that key
+            //might need loop iteration
+            //nvm we don't lol
+            Student output = students.get(input);
+            output.getGradeAverage();
+
+        } while (Input.yesNo()); //method grabbed from importing Input.java
     }
 }
