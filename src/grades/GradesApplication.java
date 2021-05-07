@@ -32,7 +32,7 @@ public class GradesApplication {
 
         Map<String, Student> students = new HashMap<>();
         students.put("leo", leo);
-        students.put("xXshreddermasherXx", raph);
+        students.put("xXshredderbreakerXx", raph);
         students.put("cowaMIKEY", mikey);
         students.put("d0nn13.exe", donnie);
         //            System.out.println(students);
@@ -52,7 +52,7 @@ public class GradesApplication {
 
             String input = sc.next();
             //if the input string equals a key, display the value of that key
-            //might need loop iteration
+            //might need another loop iteration
             //nvm we don't lol
             Student output = students.get(input); //grabs student object depending on input
 
@@ -61,8 +61,10 @@ public class GradesApplication {
             if(output != null){
                 output.getGradeAverage();
             } else {
-                System.out.println("no users with that username were found");
+                System.out.println("No users with that username were found");
             }
+
+            //All done, now to format it to look like the example
 
         } while (Input.yesNo()); //method grabbed from Input.java (imported up top)
     }
