@@ -178,34 +178,34 @@ public class CollectionsLecture {
 
         // creating hash maps
 
-//        Map<String, String> usernames = new HashMap<>();
-//        usernames.put("Ryan", "ryanorsinger");
-//        usernames.put("Luis", "MontealegreLuis");
-//        usernames.put("Zach", "zgulde");
-//        usernames.put("Fernando", "fmendozaro");
-//        usernames.put("Justin", "jreich5");
-//        System.out.println(usernames);
+        Map<String, String> usernames = new HashMap<>(); //2 arguments for getting the key and value of entries (like parameters). creates key value pairs
+        usernames.put("Ryan", "ryanorsinger"); //(name, username)
+        usernames.put("Luis", "MontealegreLuis");
+        usernames.put("Zach", "zgulde");
+        usernames.put("Fernando", "fmendozaro");
+        usernames.put("Justin", "jreich5");
+        System.out.println(usernames);
 
         // getting values from and info about hash map
 
 //        System.out.println(usernames);
-//        System.out.println(usernames.get("Justin"));
-//        System.out.println(usernames.get("Phillip"));
+        System.out.println(usernames.get("Justin")); //returns value (jreich5)
+        System.out.println(usernames.get("Phillip")); //returns null (non-existent)
 //        System.out.println(usernames.get("Justin"));
 //        System.out.println(usernames.getOrDefault("Fred", "gocodeup"));
 //        System.out.println(usernames.containsKey("Luis"));
 
         // updating hash maps
 
-//        usernames.put("Ryan", "rorsinger");
-//        System.out.println(usernames);
+        usernames.put("Ryan", "rorsinger"); //changed username
+        System.out.println(usernames);
 //        System.out.println(usernames);
 //        usernames.put("Ryan", "Test");
 //
 //        usernames.putIfAbsent("Zach", "coderdude24");
 //        System.out.println(usernames);
-//        usernames.replace("Ryan", "torvalds"); // same as put
-//        System.out.println(usernames);
+        usernames.replace("Ryan", "torvalds"); // same as put
+        System.out.println(usernames);
 
         // removing pairs from hash map
 
@@ -214,10 +214,36 @@ public class CollectionsLecture {
 //        System.out.println(usernames.remove("Zach"));
 //        System.out.println(usernames);
 //        System.out.println(usernames);
-//        usernames.clear();
-//        System.out.println(usernames);
-//        System.out.println(usernames.isEmpty());
+        usernames.clear(); //cleared out the object
+        System.out.println(usernames);
+        System.out.println(usernames.isEmpty());
 
+        /*
+
+            TODO: Create a HashMap of three people in class with keys using their last name
+             and values at those keys using their first name.
+
+             Example
+
+             "Justin" could be returned from nameHashMap.get("Reich") */
+             Map<String, String> nameHashMap = new HashMap<>();
+             nameHashMap.put("Kenyon", "Luce");
+             nameHashMap.put("Jake", "Chadwell");
+             nameHashMap.put("Alex", "Avitia");
+
+        System.out.println(nameHashMap.get("Luce"));
+
+
+         /*   BONUS TODO: Create a HashMap containing three people in the class with keys using their
+             first name and values that are an ArrayList of strings containing at least two
+             objects visible in their background.
+
+             Example
+
+             ArrayList<String> with values ("Codeup Sign", "Black Background", "Nothing Else")
+             from backgroundHashMap.get("Justin")
+
+         */
 
     }
 
