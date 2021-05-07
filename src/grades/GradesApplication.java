@@ -32,10 +32,10 @@ public class GradesApplication {
 
         Map<String, Student> students = new HashMap<>();
         students.put("leo", leo);
-        students.put("xXshredderbreakerXx", raph);
+        students.put("xXshreddermasherXx", raph);
         students.put("cowaMIKEY", mikey);
         students.put("d0nn13.exe", donnie);
-        //            System.out.println(students);
+//        System.out.println(students);
 
         do {
             System.out.println();
@@ -47,7 +47,7 @@ public class GradesApplication {
             //seems like the usernames were sorted automatically
 
             System.out.println();
-            System.out.println("Which student would you like to see more information about?");
+            System.out.println("Which student would you like to see more information on?");
             Scanner sc = new Scanner(System.in);
 
             String input = sc.next();
@@ -59,13 +59,14 @@ public class GradesApplication {
             //System.out.println(output); //returns null when input doesn't match username, catch this before getting grade so we don't get an error
             //display message and continue when input does not match
             if(output != null){
-                output.getGradeAverage();
+                System.out.printf(
+                        "%s - Github Username: %s\n" + //name and username (input)
+                        "Current Average: %.2f\n" // grade
+                ,output.getName(), input, output.getGradeAverage());
             } else {
                 System.out.println("No users with that username were found");
             }
-
-            //All done, now to format it to look like the example
-
         } while (Input.yesNo()); //method grabbed from Input.java (imported up top)
+        System.out.println("See ya");
     }
 }

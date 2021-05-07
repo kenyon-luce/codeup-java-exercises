@@ -15,7 +15,7 @@ public class Student {
 
     // returns the student's name
     public String getName(){
-        System.out.println(this.name + "  " + this.grades);
+//        System.out.print(this.name);
         return this.name;
     }
     // adds the given grade to the grades property
@@ -30,26 +30,7 @@ public class Student {
         }
 
         double average = total/grades.size();
-        System.out.printf("%s's grade average is: %.2f\n", this.getName(), average);
-
+//        System.out.printf("Current Average: %.2f\n", average);
         return average;
     }
-
-//    public static void main(String[] args){
-//        Student kenyon = new Student("Kenyon");
-//        kenyon.addGrade(100);
-//        kenyon.addGrade(85);
-//        kenyon.addGrade(95);
-//        kenyon.addGrade(90);
-//        kenyon.getGradeAverage();
-//
-//        System.out.println();
-//
-//        Student max = new Student("Maximillion");
-//        max.addGrade(100);
-//        max.addGrade(100);
-//        max.addGrade(100);
-//        max.addGrade(100);
-//        max.getGradeAverage();
-//    }
 }
