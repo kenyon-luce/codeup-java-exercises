@@ -37,10 +37,17 @@ public class GradesApplication {
         donnie.getGradeAverage();
 
         Map<String, Student> students = new HashMap<>();
-        students.put("leonardo", leo);
+        students.put("leo", leo);
         students.put("xXshreddermasherXx", raph);
         students.put("cowaMIKEY", mikey);
         students.put("d0nn13.exe", donnie);
-    }
 
+        System.out.println(students);
+        System.out.println();
+
+        String[] listOfKeys = students.keySet().toArray(new String[0]); //created a list that will contain all our keys
+        for (String key : listOfKeys) { //iterate through listOfKeys to print keys
+            System.out.println(key);
+        }
+    }
 }
