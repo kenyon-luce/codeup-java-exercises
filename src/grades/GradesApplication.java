@@ -2,6 +2,7 @@ package grades;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -49,5 +50,12 @@ public class GradesApplication {
         for (String key : listOfKeys) { //iterate through listOfKeys to print keys
             System.out.println(key);
         }
+        //seems like the usernames were sorted automatically
+
+        System.out.println();
+        System.out.println("Which student would you like to see more information about?");
+        Scanner sc = new Scanner(System.in);
+
+        String input = sc.next();
     }
 }
