@@ -14,31 +14,21 @@ public class GradesApplication {
         leo.addGrade(100);
         leo.addGrade(85);
         leo.addGrade(95);
-        leo.getGradeAverage();
-
-        System.out.println();
 
         Student raph = new Student("Raphael");
         raph.addGrade(63);
         raph.addGrade(50);
         raph.addGrade(25);
-        raph.getGradeAverage();
-
-        System.out.println();
 
         Student mikey = new Student("Michelangelo");
         mikey.addGrade(70);
         mikey.addGrade(85);
         mikey.addGrade(80);
-        mikey.getGradeAverage();
-
-        System.out.println();
 
         Student donnie = new Student("Donatello");
         donnie.addGrade(100);
         donnie.addGrade(100);
         donnie.addGrade(101);
-        donnie.getGradeAverage();
 
         Map<String, Student> students = new HashMap<>();
         students.put("leo", leo);
@@ -64,9 +54,16 @@ public class GradesApplication {
             //if the input string equals a key, display the value of that key
             //might need loop iteration
             //nvm we don't lol
-            Student output = students.get(input);
-            output.getGradeAverage();
+            Student output = students.get(input); //grabs student object depending on input
 
-        } while (Input.yesNo()); //method grabbed from importing Input.java
+            //System.out.println(output); //returns null when input doesn't match username, catch this before getting grade so we don't get an error
+            //display message and continue when input does not match
+            if(output != null){
+                output.getGradeAverage();
+            } else {
+                System.out.println("no users with that username were found");
+            }
+
+        } while (Input.yesNo()); //method grabbed from Input.java (imported up top)
     }
 }
