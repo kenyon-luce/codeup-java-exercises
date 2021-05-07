@@ -30,26 +30,26 @@ public class Student {
         }
 
         double average = total/grades.size();
-        System.out.println(this.getName() + "'s grade average is: " + average);
+        System.out.printf("%s's grade average is: %.2f\n", this.getName(), average);
 
         return average;
     }
 
-    public static void main(String[] args){
-        Student kenyon = new Student("Kenyon");
-        kenyon.addGrade(100);
-        kenyon.addGrade(85);
-        kenyon.addGrade(95);
-        kenyon.addGrade(90);
-        kenyon.getGradeAverage();
-
-        System.out.println();
-
-        Student max = new Student("Maximillion");
-        max.addGrade(100);
-        max.addGrade(100);
-        max.addGrade(100);
-        max.addGrade(100);
-        max.getGradeAverage();
-    }
+//    public static void main(String[] args){
+//        Student kenyon = new Student("Kenyon");
+//        kenyon.addGrade(100);
+//        kenyon.addGrade(85);
+//        kenyon.addGrade(95);
+//        kenyon.addGrade(90);
+//        kenyon.getGradeAverage();
+//
+//        System.out.println();
+//
+//        Student max = new Student("Maximillion");
+//        max.addGrade(100);
+//        max.addGrade(100);
+//        max.addGrade(100);
+//        max.addGrade(100);
+//        max.getGradeAverage();
+//    }
 }
