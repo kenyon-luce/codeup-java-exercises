@@ -8,6 +8,8 @@ public class Rectangle extends Quadrilateral implements Measurable{
         System.out.println("Perimeter: " + perimeter);
         return perimeter;
     }
+    //9: Why does the code fail to compile if you leave off the getPerimeter method in Rectangle?
+    //because we are creating a myShape with an instance of Rectangle, we need to pull from this method which is extended from Measurable, otherwise it would not know how to get the perimeter for Rectangle
 
     @Override
     public double getArea() {

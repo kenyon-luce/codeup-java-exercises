@@ -13,7 +13,7 @@ public class Square extends Quadrilateral{
     public double getArea() {
         double area = Math.pow(length, 2);
         System.out.println("Area: " + area);
-        return 0;
+        return area;
     }
 
     //why does it complain when I delete the 2 code blocks below?
