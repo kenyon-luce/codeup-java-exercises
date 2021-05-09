@@ -11,6 +11,10 @@ public class GroceriesApplication {
         String initialize = sc.next();
 
         if (initialize.startsWith("y")) {
+            Item newItem;
+            String finalize;
+            List<Item> itemList;
+            do{
             System.out.println("ok");
             System.out.println(
                     "1 - Beverages\n" +
@@ -52,25 +56,28 @@ public class GroceriesApplication {
             }
             System.out.println("You selected: " + category);
 
-            System.out.println("What name?");
+            System.out.println("What name? (single name)");
             String name = sc.next();
 
             System.out.println("How many?");
             int quantity = sc.nextInt();
+            itemList = new ArrayList<>();
 
-            Item newItem = new Item(name, category);
+                newItem = new Item(name, category);
+                itemList.add(newItem);
+                System.out.println("Add new item? [Y/N]");
+                finalize = sc.next();
+            } while(finalize.equalsIgnoreCase("y"));
 
-            System.out.println("Name: " + newItem.getItemName());
-            System.out.println("Category: " + newItem.getCategory());
-            newItem.setQuantity(quantity);
-            System.out.println("Quantity: " + newItem.getQuantity());
+//            System.out.println("Name: " + newItem.getItemName());
+//            System.out.println("Category: " + newItem.getCategory());
+//            newItem.setQuantity(quantity);
+//            System.out.println("Quantity: " + newItem.getQuantity());
 
-//            List<Item> itemList = new ArrayList<>();
-//            itemList.add(newItem);
-//
-//            for(Item item : itemList){
-//                System.out.println(item);
-//            }
+
+            for(Item item : itemList){
+                System.out.printf("(%s, %s, %d)\n", item.getItemName(),item.getCategory(), item.getQuantity());
+            }
         }
     }
 }
