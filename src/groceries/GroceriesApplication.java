@@ -53,16 +53,16 @@ public class GroceriesApplication {
             System.out.println("You selected: " + category);
 
             System.out.println("What name?");
-            String name = sc.nextLine();
+            String name = sc.next();
 
-//            System.out.println("How many?");
-//            int quantity = sc.nextInt();
+            System.out.println("How many?");
+            int quantity = sc.nextInt();
 
             Item newItem = new Item(name, category);
 
             System.out.println("Name: " + newItem.getItemName());
             System.out.println("Category: " + newItem.getCategory());
-//            newItem.setQuantity(quantity);
+            newItem.setQuantity(quantity);
             System.out.println("Quantity: " + newItem.getQuantity());
 
 //            List<Item> itemList = new ArrayList<>();
