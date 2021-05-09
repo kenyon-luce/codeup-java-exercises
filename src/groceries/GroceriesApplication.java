@@ -1,6 +1,7 @@
 package groceries;
 
-import java.util.Scanner;
+import java.util.*;
+
 import util.Input;
 
 public class GroceriesApplication {
@@ -59,10 +60,17 @@ public class GroceriesApplication {
 
             Item newItem = new Item(name, category);
 
-            System.out.println("Name: " + newItem.getItemName());
-            System.out.println("Category: " + newItem.getCategory());
-            newItem.setQuantity(quantity);
-            System.out.println("Quantity: " + newItem.getQuantity());
+//            System.out.println("Name: " + newItem.getItemName());
+//            System.out.println("Category: " + newItem.getCategory());
+//            newItem.setQuantity(quantity);
+//            System.out.println("Quantity: " + newItem.getQuantity());
+
+            List<Item> itemList = new ArrayList<>();
+            itemList.add(newItem);
+
+            for(Item item : itemList){
+
+            }
         }
     }
 }
