@@ -55,22 +55,22 @@ public class GroceriesApplication {
             System.out.println("What name?");
             String name = sc.nextLine();
 
-            System.out.println("How many?");
-            int quantity = sc.nextInt();
+//            System.out.println("How many?");
+//            int quantity = sc.nextInt();
 
             Item newItem = new Item(name, category);
 
-//            System.out.println("Name: " + newItem.getItemName());
-//            System.out.println("Category: " + newItem.getCategory());
+            System.out.println("Name: " + newItem.getItemName());
+            System.out.println("Category: " + newItem.getCategory());
 //            newItem.setQuantity(quantity);
-//            System.out.println("Quantity: " + newItem.getQuantity());
+            System.out.println("Quantity: " + newItem.getQuantity());
 
-            List<Item> itemList = new ArrayList<>();
-            itemList.add(newItem);
-
-            for(Item item : itemList){
-
-            }
+//            List<Item> itemList = new ArrayList<>();
+//            itemList.add(newItem);
+//
+//            for(Item item : itemList){
+//                System.out.println(item);
+//            }
         }
     }
 }
