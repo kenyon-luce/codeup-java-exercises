@@ -60,7 +60,7 @@ public class Input {
 //        System.out.println(input);
             return input;
         } catch (NumberFormatException e){
-            System.out.println("That wasn't a number!");
+            System.out.println("That wasn't an integer!");
             return 0; //sets default so it doesn't break the rest of my code
         }
     }
