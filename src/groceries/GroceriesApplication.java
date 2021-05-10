@@ -61,7 +61,7 @@ public class GroceriesApplication {
 
             System.out.println("How many?");
             int quantity = sc.nextInt();
-            itemList = new ArrayList<>();
+            itemList = new ArrayList<Item>(); //want to create an array that you add to, when printing the list it only prints the latest item
 
                 newItem = new Item(name, category);
                 itemList.add(newItem);
