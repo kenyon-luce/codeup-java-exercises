@@ -54,17 +54,22 @@ public class Input {
 
     public static int getInt(){ //refactored
         sc = new Scanner(System.in);
-        String intStr = getString();
-        int input = Integer.valueOf(intStr);
+        try {
+            String intStr = getString();
+            int input = Integer.valueOf(intStr);
 //        System.out.println(input);
-        return input;
+            return input;
+        } catch (NumberFormatException e){
+            System.out.println("That wasn't a number!");
+            return 0; //sets default so it doesn't break the rest of my code
+        }
     }
 
     //TODO: The getDouble method should do the same thing, but with decimal numbers.
 
     public static double getDouble(double min, double max) {
         //this method breaks if i input a decimal number
-        System.out.println("Give me a decimal number between " + max + " and " + min);
+        System.out.println("Give me a decimal number between " + min + " and " + max);
         double guessDouble;
         do {
             guessDouble = getDouble();
@@ -81,9 +86,14 @@ public class Input {
 
     public static double getDouble(){ //refactored
         sc = new Scanner(System.in);
-        String doubleStr = getString();
-        double input = Double.valueOf(doubleStr);
-        return input;
+        try {
+            String doubleStr = getString();
+            double input = Double.valueOf(doubleStr);
+            return input;
+        } catch (NumberFormatException e){
+            System.out.println("That wasn't a number!");
+            return 0;
+        }
     }
 
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
