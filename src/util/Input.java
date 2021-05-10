@@ -5,12 +5,13 @@ import java.util.Scanner;
 //class
 public class Input {
     //instance variable (private)
-    private static Scanner sc = new Scanner(System.in);
+    private static Scanner sc;
 
     //instance methods
     public static String getString(){
+        sc = new Scanner(System.in);
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
-        System.out.println("Give me a string");
+//        System.out.println("Give me a string");
         String string = sc.nextLine();
         System.out.println(string);
         return string;
@@ -18,6 +19,7 @@ public class Input {
 
     //TODO: The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.
     public static boolean yesNo(){
+        sc = new Scanner(System.in);
         //because we are creating an instance to an already defined instance type (scanner), we do not need the "static" keyword
         System.out.println("\nContinue?");
         String input = sc.next();
@@ -45,13 +47,16 @@ public class Input {
     }
 
 //    public static int getInt(){ //refactor
+//    sc = new Scanner(System.in);
 //        int input = sc.nextInt();
 //        return input;
 //    }
 
     public static int getInt(){ //refactor
-        String intStr = nextString();
-        int input = Integer.valueOf(String intStr);
+        sc = new Scanner(System.in);
+        String intStr = getString();
+        int input = Integer.valueOf(intStr);
+//        System.out.println(input);
         return input;
     }
 
@@ -69,6 +74,7 @@ public class Input {
     }
 
     public static double getDouble(){ //refactor
+        sc = new Scanner(System.in);
         double inputDouble = sc.nextDouble();
         return inputDouble;
     }
