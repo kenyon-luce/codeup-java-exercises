@@ -44,8 +44,14 @@ public class Input {
         return guess;
     }
 
+//    public static int getInt(){ //refactor
+//        int input = sc.nextInt();
+//        return input;
+//    }
+
     public static int getInt(){ //refactor
-        int input = sc.nextInt();
+        String intStr = nextString();
+        int input = Integer.valueOf(String intStr);
         return input;
     }
 
