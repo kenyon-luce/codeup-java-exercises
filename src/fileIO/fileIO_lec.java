@@ -18,6 +18,16 @@ public class fileIO_lec {
     public static void main(String[] args) throws IOException {
         Path filePathPoem = Paths.get("./src/fileIO/poem.txt");
 
+        System.out.println("read poem: " + Files.exists(filePathPoem));
         fileIO_lec.printPoem(filePathPoem); //prints poem and uses loop to number each line
+
+        System.out.println();
+
+        //we can combine paths so we don't have to keep typing directory when searching for a specific file
+        String directory = "./src/fileIO/data";
+        String file = "file.txt";
+
+        Path dataFile = Paths.get(directory, file);
+        System.out.println("This is a combined path: " + dataFile); //automatically added a "/" in between the directory and file
     }
 }
