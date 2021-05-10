@@ -44,7 +44,7 @@ public class Input {
         return guess;
     }
 
-    public static int getInt(){
+    public static int getInt(){ //refactor
         int input = sc.nextInt();
         return input;
     }
@@ -62,7 +62,7 @@ public class Input {
         return guessDouble;
     }
 
-    public static double getDouble(){
+    public static double getDouble(){ //refactor
         double inputDouble = sc.nextDouble();
         return inputDouble;
     }

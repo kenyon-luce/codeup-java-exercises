@@ -1,5 +1,7 @@
 package util;
 
+import java.util.InputMismatchException;
+
 public class InputTest {
     public static void main(String[] args) {
         Input.getString();

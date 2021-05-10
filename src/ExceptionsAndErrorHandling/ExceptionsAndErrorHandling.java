@@ -25,7 +25,7 @@ public class ExceptionsAndErrorHandling {
             System.out.println("Exception caught!");
             x = 0; //sets a default value to x when a false value is given
         } catch (Exception e) {
-            e.printStackTrace(); //prints the exception context
+            e.printStackTrace(); //prints the exception details
         } finally {
             System.out.println("This will always run."); //sort of like an else statement but for exceptions
         }
