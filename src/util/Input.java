@@ -75,7 +75,8 @@ public class Input {
 
     public static double getDouble(){ //refactor
         sc = new Scanner(System.in);
-        double inputDouble = sc.nextDouble();
+        String intDouble = getString();
+        double inputDouble = Double.valueOf(intDouble);
         return inputDouble;
     }
 
