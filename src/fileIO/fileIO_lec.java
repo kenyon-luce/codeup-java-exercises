@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 public class fileIO_lec {
@@ -29,5 +30,11 @@ public class fileIO_lec {
 
         Path dataFile = Paths.get(directory, file);
         System.out.println("This is a combined path: " + dataFile); //automatically added a "/" in between the directory and file
+
+        Path groceriesPath = dataFile;
+        System.out.println("^this is also our groceries path");
+
+        List<String> groceries = Arrays.asList("coffee", "milk", "sugar");
+//        Files.write(Paths.get("data", "groceries.txt"));
     }
 }
