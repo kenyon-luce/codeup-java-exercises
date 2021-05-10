@@ -52,7 +52,7 @@ public class Input {
 //        return input;
 //    }
 
-    public static int getInt(){ //refactor
+    public static int getInt(){ //refactored
         sc = new Scanner(System.in);
         String intStr = getString();
         int input = Integer.valueOf(intStr);
@@ -73,11 +73,17 @@ public class Input {
         return guessDouble;
     }
 
-    public static double getDouble(){ //refactor
+//    public static double getDouble(){ //refactor
+//        sc = new Scanner(System.in);
+//        double inputDouble = sc.nextDouble();
+//        return inputDouble;
+//    }
+
+    public static double getDouble(){ //refactored
         sc = new Scanner(System.in);
-        String intDouble = getString();
-        double inputDouble = Double.valueOf(intDouble);
-        return inputDouble;
+        String doubleStr = getString();
+        double input = Double.valueOf(doubleStr);
+        return input;
     }
 
     //TODO: Create another class named InputTest that has a static main method that uses all the methods from the Input class.
