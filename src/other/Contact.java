@@ -35,9 +35,9 @@ public class Contact {
 
         //Setting up file path
 
-        String directory = "./src/Contacts";
+        String directory = "./src/other";
 
-        String filename = "Contacts-List.txt";
+        String filename = "contacts.txt";
 
         Path contactPath = Paths.get(directory, filename);
 
