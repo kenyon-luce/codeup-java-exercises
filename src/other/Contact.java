@@ -39,21 +39,6 @@ public class Contact {
 
         String filename = "Contacts-List.txt";
 
-        //create new filepath if a filepath isn't found
-//        Path dataDirectory = Paths.get(directory);
-//
-//        Path dataFile = Paths.get(directory);
-//
-//        if (Files.notExists(dataDirectory)) {
-//
-//            Files.createDirectories(dataDirectory);
-//        }
-//
-//        if (Files.notExists(dataFile)) {
-//
-//            Files.createFile(dataFile);
-//        }
-
         Path contactPath = Paths.get(directory, filename);
 
         //**********GET INPUT***********
