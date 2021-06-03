@@ -1,5 +1,6 @@
 public class Fibonacci {
     public static void main(String[] args){
+        //used long because it has a bigger number cap, if we loop too much we'd be getting negative numbers since the cap works like a big clock that sends it to the negatives when past the cap limit
         long a = 0;
         long b = 1;
         long c;
